@@ -1,16 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {faCoffee, faBuilding, faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import { useNavigation } from '@react-navigation/native'; // Importa o hook useNavigation
 
 const Drinks = () => {
+  const navigation = useNavigation(); // Inicializa o hook useNavigation
+  
+  const info = 'Ut augue dui, vehicula ut tempor quis, ornare mattis arcu. Ut ultrices nisi at elementum vulputate. Curabitur quam neque, finibus ut sapien nec, efficitur molestie tellus. Phasellus nec cursus lorem, et dapibus massa. Phasellus vel cursus magna. ';
   // Array de empresas com avaliações de estrelas
   const companies = [
-    { name: 'Company Name 1', info: 'Info 1', rating: 4.5 },
-    { name: 'Company Name 2', info: 'Info 2', rating: 3 },
-    { name: 'Company Name 3', info: 'Info 3', rating: 2.5 },
-    { name: 'Company Name 4', info: 'Info 4', rating: 4 },
-    { name: 'Company Name 5', info: 'Info 5', rating: 5 },
+    { name: 'Company Name 1', info, rating: 4.5 },
+    { name: 'Company Name 2', info, rating: 3 },
+    { name: 'Company Name 3', info, rating: 2.5 },
+    { name: 'Company Name 4', info, rating: 4 },
+    { name: 'Company Name 5', info, rating: 5 },
   ];
 
   // Função para renderizar as estrelas de avaliação
@@ -30,6 +34,10 @@ const Drinks = () => {
     }
     return stars;
   };
+  
+  const redirectToCompanyDetails = (company) => {
+    navigation.navigate('DetailsCorporation', { company });
+  };
 
   return (
     <View style={styles.container}>
@@ -40,18 +48,15 @@ const Drinks = () => {
       </View>
       <View style={styles.infoContainer}>
         {companies.map((company, index) => (
-          <View key={index} style={styles.infoRectangle}>
+          <TouchableOpacity key={index} style={styles.infoRectangle} onPress={() => redirectToCompanyDetails(company)}>
             <FontAwesomeIcon icon={faCoffee} size={50} color="black" />
             <View style={styles.companyInfo}>
               <View style={styles.companyNameContainer}>
                 <Text style={styles.companyName}>{company.name}</Text>
               </View>
-              <View style={styles.additionalInfoContainer}>
-                <Text style={styles.additionalInfo}>{company.info}</Text>
-              </View>
               <View style={styles.ratingContainer}>{renderRatingStars(company.rating)}</View>
             </View>
-          </View>
+          </TouchableOpacity>
         ))}
       </View>
     </View>
