@@ -8,9 +8,9 @@ import Principal from './src/screens/Principal'; // Supondo que a tela principal
 import DetailsCorporation from './src/screens/DetailsCorporation'; // Supondo que a tela principal esteja em um arquivo separado
 import Technology from './src/categories/Technology/Technology'; // Importando a tela de Technology
 import Drinks from './src/categories/Drinks/Drinks'; // Importando a tela de Drinks
-import Pharmaco from './src/categories/Pharmaco/Pharmaco'; // Importando a tela de Technology
+import Pharmaco from './src/categories/Pharmaco'; // Importando a tela de Technology
 import Automobile from './src/categories/Automobile/Automobile'; // Importando a tela de Technology
-import Food from './src/categories/Food/Food'; // Importando a tela de Technology
+import Food from './src/categories/Food'; // Importando a tela de Technology
 import Fashion from './src/categories/Fashion/Fashion'; // Importando a tela de Technology
 const Stack = createStackNavigator();
 const App = () => {

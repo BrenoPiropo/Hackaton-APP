@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faLaptopCode, faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faStar, faStarHalf ,IconDefinition} from '@fortawesome/free-solid-svg-icons';
+import { styles } from './styles'; // Importa os estilos
 
 const DetailsCompany = ({ route }) => {
   // Obtém os parâmetros passados durante a navegação
@@ -36,36 +37,5 @@ const DetailsCompany = ({ route }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#1E291B',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  content: {
-    alignItems: 'center',
-  },
-  laptopIcon: {
-    width: 90.45,
-    height: 83.82,
-    marginBottom: 20,
-  },
-  companyName: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
-    marginBottom: 10,
-  },
-  companyInfo: {
-    fontSize: 16,
-    color: 'white',
-    marginBottom: 10,
-  },
-  ratingContainer: {
-    flexDirection: 'row',
-  },
-});
 
 export default DetailsCompany;
