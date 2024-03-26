@@ -46,9 +46,7 @@ const Pharmaco = () => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <View style={styles.titleRectangle}>
-          <Text style={styles.title}>Pharmaco</Text>
-        </View>
+        <Text style={[styles.title, {marginTop: -65}]}>Pharmaco</Text>
       </View>
       <View style={styles.infoContainer}>
         {companies.map((company, index) => (

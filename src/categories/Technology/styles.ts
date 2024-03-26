@@ -2,18 +2,12 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#1E291B', // Fundo verde
+      backgroundColor: '#205C4E', // Fundo verde
       justifyContent: 'center',
       alignItems: 'center',
     },
     titleContainer: {
       marginBottom: 20, // Espaçamento abaixo do título
-    },
-    titleRectangle: {
-      backgroundColor: '#6D5B40', // Cor de fundo do retângulo do título
-      borderRadius: 30, // Borda arredondada
-      paddingHorizontal: 20, // Espaçamento horizontal interno
-      paddingVertical: 10, // Espaçamento vertical interno
     },
     title: {
       fontSize: 24,
@@ -24,13 +18,13 @@ export const styles = StyleSheet.create({
       marginTop: 20, // Espaçamento acima do retângulo de informações
     },
     infoRectangle: {
-      right: 30,
+      left: 2,
       flexDirection: 'row', // Organiza o ícone e as informações da empresa em linha
       alignItems: 'center', // Alinha os itens verticalmente
-      width: 300,
+      width: 340,
       height: 100,
       backgroundColor: '#6D5B40', // Cor de fundo do retângulo de informações
-      borderRadius: 30, // Borda arredondada
+      borderRadius: 20, // Borda arredondada
       paddingHorizontal: 20, // Espaçamento horizontal interno
       marginBottom: 10, // Espaçamento abaixo do retângulo
     },

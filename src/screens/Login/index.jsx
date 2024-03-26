@@ -37,6 +37,7 @@ const Login = () => {
         <Text style={styles.text}>Sustentech</Text>
       </View>
     </View>
+    
   );
 };
 

@@ -1,13 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faLaptop,faShoppingBag, faStar, faStarHalf, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, StyleSheet,TouchableOpacity } from 'react-native';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faAppleAlt, faAppleWhole, faStar, faStarHalf,IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { useNavigation } from '@react-navigation/native'; // Importa o hook useNavigation
 import { styles } from './styles'; // Importa os estilos
 
-const Technology = () => {
-  const navigation = useNavigation();
-  const info = 'Ut augue dui, vehicula ut tempor quis, ornare mattis arcu. Ut ultrices nisi at elementum vulputate. Curabitur quam neque, finibus ut sapien nec, efficitur molestie tellus. Phasellus nec cursus lorem, et dapibus massa. Phasellus vel cursus magna. '
+const Food = () => {
+  const navigation = useNavigation(); // Inicializa o hook useNavigation
+  
+  const info = 'Ut augue dui, vehicula ut tempor quis, ornare mattis arcu. Ut ultrices nisi at elementum vulputate. Curabitur quam neque, finibus ut sapien nec, efficitur molestie tellus. Phasellus nec cursus lorem, et dapibus massa. Phasellus vel cursus magna. ';
   // Array de empresas com avaliações de estrelas
   const companies = [
     { name: 'Company Name 1', info, rating: 4.5 },
@@ -37,23 +38,19 @@ const Technology = () => {
     }
     return stars;
   };
-
   const redirectToCompanyDetails = (company) => {
-    // Navega para a tela de detalhes da empresa, passando os dados da empresa como parâmetro
     navigation.navigate('DetailsCorporation', { company });
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <View style={styles.titleRectangle}>
-          <Text style={styles.title}>Technology</Text>
-        </View>
+        <Text style={[styles.title, {marginTop: -65}]}>Food</Text>
       </View>
       <View style={styles.infoContainer}>
         {companies.map((company, index) => (
           <TouchableOpacity key={index} style={styles.infoRectangle} onPress={() => redirectToCompanyDetails(company)}>
-            <FontAwesomeIcon icon={faLaptop} size={50} color="black" />
+            <FontAwesomeIcon icon={faAppleWhole} size={50} color="red" />
             <View style={styles.companyInfo}>
               <View style={styles.companyNameContainer}>
                 <Text style={styles.companyName}>{company.name}</Text>
@@ -66,6 +63,4 @@ const Technology = () => {
     </View>
   );
 };
-
-
-export default Technology;
+export default Food;

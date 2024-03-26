@@ -28,14 +28,20 @@ const DetailsCompany = ({ route }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
-        <FontAwesomeIcon icon={faLaptopCode} size={90} color="black" style={styles.laptopIcon} />
-        <Text style={styles.companyName}>{company.name}</Text>
-        <Text style={styles.companyInfo}>{company.info}</Text>
-        <View style={styles.ratingContainer}>{renderRatingStars(company.rating)}</View>
+      <View style={styles.content}>        
+        <View style={styles.companyInfoContainer}>
+          <View style={styles.content}>
+            <FontAwesomeIcon icon={faLaptopCode} size={90} color="black" style={[styles.laptopIcon, {marginTop: 10}]} />
+            <Text style={styles.companyName}>{company.name}</Text>
+            <View style={[styles.ratingContainer, { marginTop: 50 }]}>{renderRatingStars(company.rating)}</View>
+            <Text style={[styles.companyInfo, { marginTop: -120 }]}>{company.info}</Text>
+            </View>
+        </View>
+        
       </View>
     </View>
   );
 };
 
 export default DetailsCompany;
+

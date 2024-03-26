@@ -10,11 +10,12 @@ export const styles = StyleSheet.create({
   searchField: {
     alignItems: 'center',
     flexDirection: 'row',
-    width: 250,
-    height: 48,
+    width: 320,
+    height: 45,
     backgroundColor: '#FFF',
     borderRadius: 8,
     paddingLeft: 35,
+    marginTop: -180,
   },
   input: {
     flex: 1,
@@ -41,7 +42,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     top:45,
-    left: 20,
+    left: 15,
+    right: 15,
   },
   category: {
     alignItems: 'center',

@@ -2,13 +2,12 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#205C4E',
+      backgroundColor: '205C4E',
       alignItems: 'center',
       justifyContent: 'center',
     },
     content: {
       alignItems: 'center',
-      justifyContent: 'center',
     },
     laptopIcon: {
       top:-200,

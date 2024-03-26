@@ -60,7 +60,7 @@ const Principal = ({ navigation }) => {
       <View style={[styles.categoriesContainer, { marginTop: isSearchFocused ? 48 : 0 }]}>
         {filteredCategories.map((category, index) => (
           <TouchableOpacity style={styles.category} key={index} onPress={category.onPress}>
-            <FontAwesomeIcon icon={category.icon} size={100} color="white" />
+            <FontAwesomeIcon icon={category.icon} size={90} color="white" />
             <Text style={styles.categoryName}>{category.name}</Text>
           </TouchableOpacity>
         ))}
